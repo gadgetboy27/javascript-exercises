@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>This is practice for object literals</h2>
+
+    <script>
+        const book1 = {
+            title: 'Book one',
+            author: 'Jonny Doe',
+            year: '2013',
+            getSummary: function(){
+                return `${this.title} was written by
+                 ${this.author} in ${this.year}`
+            }
+        }
+        console.log(book1.getSummary())
+
+
+    </script>
+</body>
+</html>

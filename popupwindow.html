@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheets" href="style.css">
+</head>
+<body>
+    <h2>This is my practice for popup windows</h2>
+
+    
+
+<script language="javascript">
+        var popupWindow = null;
+        function positionedPopup(url,winName,w,h,t,l,scroll){
+        settings =
+        'height='+h+',width='+w+',top='+t+',left='+l+',scrollbars='+scroll+',resizable'
+        popupWindow = window.open(url,winName,settings)
+        }
+    </script>
+        <p><a href="https://www.quackit.com/javascript/examples/sample_popup.cfm" onclick="positionedPopup(this.href,'myWindow','700','300','100','200','yes');return false">Positioned Popup</a></p>
+        
+
+    <script language="javascript">
+                var popupWindow = null;
+                function centeredPopup(url,winName,w,h,scroll){
+                LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
+                TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
+                settings =
+                'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',scrollbars='+scroll+',resizable'
+                popupWindow = window.open(url,winName,settings)
+                }
+    </script>
+                <p><a href="https://www.quackit.com/javascript/examples/sample_popup.cfm" onclick="centeredPopup(this.href,'myWindow','700','300','yes');return false">Centered Popup</a></p>
+
+                <a href="JavaScript:window.close()">Close</a>
+                
+    <script src="script.js"></script>
+</body>
+</html>

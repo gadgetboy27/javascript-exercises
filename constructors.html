@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Constructors</title>
+</head>
+<h2>Learn javascript contructor methods</h2>
+<body>
+    <script>
+        function Book(title, author, year){
+            this.title = title
+            this.author = author
+            this.year = year
+            this.getSummary = function() {
+            return `${this.title} was writen by 
+            ${this.author} in ${this.year}`
+            }
+        }
+
+    // Instatialte an Object
+            const book1 = new Book('Book One', 'John Doe', '2013')
+            const book2 = new Book('Book Two', 'Jane Doe', '2016')
+
+            console.log(book1.getSummary())
+            console.log(book2.getSummary())
+            console.log(book3.getSummary())
+
+
+    </script>
+</body>
+</html>

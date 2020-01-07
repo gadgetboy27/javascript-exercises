@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prototype</title>
+</head>
+<h2>Learn javascript contructor prototype</h2>
+<body>
+    <script>
+        function Book(title, author, year){
+            this.title = title
+            this.author = author
+            this.year = year
+        }
+
+        // getSummary Prototype
+        Book.prototype.getSummary = function(){
+            return `${this.title} was writen by 
+            ${this.author} in ${this.year}`
+        }
+
+        // getAge 
+        Book.prototype.getAge = function(){
+            const years = new Date().getFullYear() - this.year
+            return `${this.title} is ${years} years old.`
+        }
+
+        // Revise / Change Year
+        Book.prototype.revise = function(newYear){
+            this.year = newYear
+            this.revised = true
+        }
+
+        // Instatialte an Object
+            const book1 = new Book('Book One', 'John Doe', '2013')
+            const book2 = new Book('Book Two', 'Jane Doe', '2016')
+            const book3 = new Book('Book Three', 'Fred Dagg', '2020')
+
+            console.log(book1.getSummary())
+            console.log(book2.getAge())
+
+            console.log(book2.getSummary())
+            console.log(book3.getAge())
+            console.log(book2)
+            book2.revise('2018')
+            console.log(book2)
+
+    </script>
+</body>
+</html>
